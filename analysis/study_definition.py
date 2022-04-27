@@ -26,7 +26,7 @@ study = StudyDefinition(
         include_measurement_date=True,
         date_format="YYYY-MM",
         return_expectations={
-            "date": {"earliest": "2010-02-01", "latest": "2020-01-31"},
+            "date": {"earliest": "2019-01-01", "latest": "2020-12-31"},
             "float": {"distribution": "normal", "mean": 28, "stddev": 8},
             "incidence": 0.80,
         }
@@ -41,7 +41,7 @@ study = StudyDefinition(
     ),
     flu_vaccine=patients.with_tpp_vaccination_record(
         target_disease_matches="influenza",
-        between=["2019-09-01", "2020-04-01"],
+        between=["2019-01-01", "2020-12-31"],
         returning="date",
         date_format="YYYY-MM",
         find_first_match_in_period=True,
